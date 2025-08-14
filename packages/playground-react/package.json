@@ -13,6 +13,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@utility-ui/common-config": "workspace:*",
+    "@utility-ui/ui": "workspace:*",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
