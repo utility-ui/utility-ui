@@ -4,13 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsc -b && vite build",
-    "dev": "vite",
+    "build": "tsc -b && nx vite:build",
+    "dev": "nx serve",
     "lint": "pnpm lint:code && pnpm lint:stylelint",
-    "lint:code": "eslint . --cache",
+    "lint:code": "nx eslint:lint --cache",
     "lint:fix": "pnpm lint:code --fix && pnpm lint:stylelint --fix",
     "lint:stylelint": "stylelint 'src/**/*.{css,less}' --cache",
-    "preview": "vite preview"
+    "preview": "nx vite:preview"
   },
   "dependencies": {
     "@utility-ui/common-config": "workspace:*",
