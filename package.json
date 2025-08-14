@@ -1,0 +1,28 @@
+{
+  "name": "@utility-ui/monorepo",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm recursive run build",
+    "check-format": "prettier . --check --cache && cspell .",
+    "dev": "pnpm recursive run dev",
+    "format": "prettier . --write --cache",
+    "lint": "pnpm recursive run lint",
+    "lint:fix": "pnpm recursive run lint:fix",
+    "prepare": "simple-git-hooks",
+    "test": "pnpm recursive run test"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint",
+    "commit-msg": "pnpm commitlint --edit $1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@types/node": "^22.17.1",
+    "cspell": "^9.2.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-organize-imports": "^4.2.0",
+    "prettier-plugin-packagejson": "^2.5.19",
+    "simple-git-hooks": "^2.13.1"
+  }
+}

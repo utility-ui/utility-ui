@@ -1,0 +1,54 @@
+{
+  "name": "@utility-ui/ui",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint": "pnpm lint:code && pnpm lint:style",
+    "lint:code": "eslint . --cache",
+    "lint:fix": "pnpm lint:code --fix && pnpm lint:style --fix",
+    "lint:style": "stylelint 'src/**/*.{css,less}' --cache",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^22.17.1",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "happy-dom": "^17.6.3",
+    "jiti": "^2.5.1",
+    "less": "^4.4.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "stylelint": "^16.23.1",
+    "stylelint-config-standard": "^39.0.0",
+    "stylelint-config-standard-less": "^3.0.1",
+    "tsdown": "^0.11.13",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.39.1",
+    "vitest": "^3.2.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
