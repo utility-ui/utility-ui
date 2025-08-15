@@ -10,7 +10,8 @@
     "lint:code": "eslint . --cache",
     "lint:fix": "pnpm lint:code --fix && pnpm lint:stylelint --fix",
     "lint:stylelint": "stylelint 'src/**/*.{css,less}' --cache",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@utility-ui/common-config": "workspace:*",
