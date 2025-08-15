@@ -6,7 +6,7 @@
     "check-format": "prettier . --check --cache && cspell .",
     "dev": "pnpm recursive run dev",
     "format": "prettier . --write --cache",
-    "lint": "pnpm recursive run lint",
+    "lint": "pnpm check-format && pnpm recursive run lint",
     "lint:fix": "pnpm recursive run lint:fix",
     "prepare": "simple-git-hooks",
     "test": "pnpm recursive run test"
