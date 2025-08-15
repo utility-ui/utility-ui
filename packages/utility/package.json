@@ -16,10 +16,10 @@
     "build": "tsdown",
     "dev": "tsdown --watch",
     "lint": "pnpm lint:code && pnpm lint:style",
-    "lint:code": "nx eslint:lint --cache",
+    "lint:code": "eslint . --cache",
     "lint:fix": "pnpm lint:code --fix && pnpm lint:style --fix",
     "lint:style": "stylelint 'src/**/*.{css,less}' --cache",
-    "test": "nx vite:test",
+    "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

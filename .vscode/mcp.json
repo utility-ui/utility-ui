@@ -1,9 +1,0 @@
-{
-  "servers": {
-    "nx-mcp": {
-      "type": "stdio",
-      "command": "pnpm",
-      "args": ["exec", "-y", "nx-mcp@latest", "."]
-    }
-  }
-}
